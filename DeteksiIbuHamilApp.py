@@ -206,7 +206,7 @@ class Ui_MainWindow(object):
         hasil_penyakit = sorted(hasil_penyakit.items(), key=lambda x: x[1], reverse=True)
         for kode_penyakit, cf in hasil_penyakit:
             nama_penyakit = penyakit[kode_penyakit]['nama']
-            self.label_hasil.setText(f"Diagnosa penyakit berdasarkan gejala yang dipilih adalah: {nama_penyakit} ({cf * 100:.2f}%)")
+            self.label_hasil.setText(f"Diagnosa penyakitmu berdasarkan gejala yang dipilih adalah: {nama_penyakit} ({cf * 100:.2f}%)")
 
 if __name__ == "__main__":
     import sys
