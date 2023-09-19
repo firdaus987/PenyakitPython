@@ -35,11 +35,10 @@ class EyeDiseaseDiagnosis(QWidget):
         }
 
         self.diseases = {
-            "Miopia": {"G01": 0.25, "G03": 0.25, "G04": 0.25, "G05": 0.25, "G06": 0.25},
-            "Hipermetropia": {"G03": 0.3, "G07": 0.3, "G08": 0.3, "G09": 0.3, "G10": 0.3, "G11": 0.3 },
-            "Astigmatisma": {"G02": 0.4, "G03": 0.4, "G12": 0.4, "G13": 0.4, "G14": 0.4, "G15": 0.4, "G16": 0.4, "G18": 0.4},
-            "Presbiopi": {"G01": 0.3, "G02": 0.3, "G03": 0.3, "G17": 0.3, "G19": 0.3, "G20": 0.3},
-            # Tambahkan penyakit lainnya di sini
+            "Miopia": {"G01": 0.38, "G03": 0.07, "G04": 1.0, "G05": 1.0, "G06": 1.0},
+            "Hipermetropia": {"G03": -0.01, "G07": 1.0, "G08": 1.0, "G09": 1.0, "G10": 1.0, "G11": 1.0 },
+            "Astigmatisma": {"G02": 0.24, "G03": -0.13, "G12": 1.0, "G13": 1.0, "G14": 1.0, "G15": 1.0, "G16": 1.0, "G18": 1.0},
+            "Presbiopi": {"G01": 0.36, "G02": 0.04, "G03": 0.04, "G17": 1.0, "G19": 1.0, "G20": 1.0},
         }
 
 
@@ -91,7 +90,7 @@ class EyeDiseaseDiagnosis(QWidget):
             confidence = 'Mungkin'
         elif 0.4 <= max_cf < 0.8:
             confidence = 'Yakin'
-        else:
+        else :
             confidence = 'Sangat Yakin'
 
         QMessageBox.information(self, 'Hasil Diagnosa', f'Berdasarkan gejala yang dipilih {confidence} anda terkena {max_disease} ')
